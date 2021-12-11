@@ -5,15 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Day6 {
+public class Day6 implements Day {
     private static File file = new File("src/AoC_2021/input/day_6/big.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    public static int part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         int[] fishDays = new int[9];
 
@@ -40,7 +35,7 @@ public class Day6 {
         return Arrays.stream(fishDays).sum();
     }
 
-    public static long part2() throws FileNotFoundException {
+    public long part2() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         long[] fishDays = new long[9];
 

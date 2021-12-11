@@ -4,15 +4,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Day2 {
+public class Day2 implements Day{
     private static File file = new File("src/AoC_2021/input/day_2/big.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    public static long part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         long horizontal = 0;
         long depth = 0;
@@ -31,7 +26,7 @@ public class Day2 {
         return horizontal * depth;
     }
 
-    public static long part2() throws FileNotFoundException{
+    public long part2() throws FileNotFoundException{
         Scanner sc = new Scanner(file);
 
         long horizontal = 0;

@@ -5,15 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Day4 {
+public class Day4 implements Day{
     private static File file = new File("src/AoC_2021/input/day_4/big.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    public static int part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         String drawnNumbersString = sc.nextLine();
         String[] drawnNumbersSplit = drawnNumbersString.split(",");
@@ -66,7 +61,7 @@ public class Day4 {
         return 0;
     }
 
-    public static int part2() throws FileNotFoundException{
+    public long part2() throws FileNotFoundException{
         Scanner sc = new Scanner(file);
         String drawnNumbersString = sc.nextLine();
         String[] drawnNumbersSplit = drawnNumbersString.split(",");

@@ -4,15 +4,10 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Day10 {
+public class Day10 implements Day{
     private static File file = new File("src/AoC_2021/input/day_10/big.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    private static long part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
 
         HashMap<Character, Integer> scores = new HashMap<>();
@@ -53,7 +48,7 @@ public class Day10 {
         return totalScore;
     }
 
-    private static long part2() throws FileNotFoundException{
+    public long part2() throws FileNotFoundException{
         Scanner sc = new Scanner(file);
 
         HashMap<Character, Integer> scores = new HashMap<>();

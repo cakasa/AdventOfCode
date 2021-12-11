@@ -3,15 +3,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Day11 {
+public class Day11 implements Day{
     private static File file = new File("src/AoC_2021/input/day_11/big.txt");
-
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    private static long part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         byte[][] octopuses = new byte[12][12];
 
@@ -79,13 +73,7 @@ public class Day11 {
         return flashes;
     }
 
-    private static void incrementFlash(byte[][] octopuses, boolean[][] flashed, int i, int j) {
-        if(!flashed[i][j]) {
-            octopuses[i][j]++;
-        }
-    }
-
-    private static long part2() throws FileNotFoundException{
+    public long part2() throws FileNotFoundException{
         Scanner sc = new Scanner(file);
         byte[][] octopuses = new byte[12][12];
 
@@ -167,5 +155,11 @@ public class Day11 {
         }
 
         return iterations;
+    }
+
+    private void incrementFlash(byte[][] octopuses, boolean[][] flashed, int i, int j) {
+        if(!flashed[i][j]) {
+            octopuses[i][j]++;
+        }
     }
 }

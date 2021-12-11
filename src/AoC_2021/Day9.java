@@ -5,15 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Day9 {
+public class Day9 implements Day{
     private static File file = new File("src/AoC_2021/input/day_9/big.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    private static long part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         String line = sc.nextLine();
 
@@ -65,7 +60,7 @@ public class Day9 {
         return totalRisk;
     }
 
-    private static long part2() throws FileNotFoundException{
+    public long part2() throws FileNotFoundException{
         Scanner sc = new Scanner(file);
         String line = sc.nextLine();
 

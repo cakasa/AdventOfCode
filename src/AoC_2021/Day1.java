@@ -4,15 +4,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Day1 {
-    private static File file = new File("src/AoC_2021/input/day_1/small.txt");
+public class Day1 implements Day {
+    private File file = new File("src/AoC_2021/input/day_1/big.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    public static int part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         int prev = Integer.parseInt(sc.nextLine());
         int count = 0;
@@ -27,7 +22,7 @@ public class Day1 {
         return count;
     }
 
-    public static int part2() throws FileNotFoundException{
+    public long part2() throws FileNotFoundException{
         Scanner sc = new Scanner(file);
         int a = Integer.parseInt(sc.nextLine());
         int b = Integer.parseInt(sc.nextLine());

@@ -5,15 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Day3 {
+public class Day3 implements Day{
     private static File file = new File("src/AoC_2021/input/day_3/big.txt");
 
-    public static void main(String[] args) throws FileNotFoundException {
-        System.out.println(part1());
-        System.out.println(part2());
-    }
-
-    public static long part1() throws FileNotFoundException {
+    public long part1() throws FileNotFoundException {
         Scanner sc = new Scanner(file);
         String binary = sc.nextLine();
         int[] columnOnes = new int[binary.length()];
@@ -39,7 +34,7 @@ public class Day3 {
         return (long) gamma * (long) epsilon;
     }
 
-    public static long part2() throws FileNotFoundException{
+    public long part2() throws FileNotFoundException{
         Scanner sc = new Scanner(file);
         String binary = sc.nextLine();
         int[] columnOnes = new int[binary.length()];
