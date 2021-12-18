@@ -19,18 +19,27 @@ public class Benchmark {
         totalTime += executeTask(9, new Day9());
         totalTime += executeTask(10, new Day10());
         totalTime += executeTask(11, new Day11());
+        totalTime += executeTask(12, new Day12());
+        totalTime += executeTask(13, new Day13());
+        totalTime += executeTask(14, new Day14());
+        totalTime += executeTask(15, new Day15());
+        totalTime += executeTask(16, new Day16());
+        totalTime += executeTask(17, new Day17());
+        totalTime += executeTask(18, new Day18());
+
+
 
         DecimalFormat df = new DecimalFormat("#.###");
         System.out.println("Total time: " + df.format(totalTime) + " ms");
     }
 
     static double executeTask(int dayNumber, Day day) throws FileNotFoundException {
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i < 10; i++) {
             day.part1();
         }
 
         double part1Time = 0;
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i < 10; i++) {
             long startTime = System.nanoTime();
             day.part1();
             long endTime = System.nanoTime();
@@ -44,7 +53,7 @@ public class Benchmark {
         }
 
         double part2Time = 0;
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i < 10; i++) {
             long startTime = System.nanoTime();
             day.part2();
             long endTime = System.nanoTime();

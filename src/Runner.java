@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 
 public class Runner {
     public static void main(String[] args) throws FileNotFoundException {
-        Day day = new Day11();
+        Day day = new Day18();
         System.out.println(day.part1());
         System.out.println(day.part2());
     }
